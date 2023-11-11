@@ -123,7 +123,6 @@ port <%=@sentinel_port%>
 <%= "sentinel failover-timeout #{calc_name} #{current['failover_timeout']}" unless current['failover_timeout'].nil? %>
 <% end %>
 
-<% if @version[:major].to_i == 2 && @version[:minor].to_i >= 8 || @version[:major].to_i > 3 %>
 # SCRIPTS EXECUTION
 #
 # sentinel notification-script and sentinel reconfig-script are used in order
@@ -201,4 +200,3 @@ port <%=@sentinel_port%>
 #
 # sentinel client-reconfig-script mymaster /var/redis/reconfig.sh
 <%= "sentinel client-reconfig-script #{@name} #{@client_reconfig_script}" unless @client_reconfig_script.nil? %>
-<% end %>
