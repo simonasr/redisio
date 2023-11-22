@@ -37,7 +37,7 @@ jobs:
           - "redis-package"
           - "sentinel"
           - "multisentinel"
-      fail-fast: false
+      fail-fast: true
 
     steps:
       - name: Check out code
