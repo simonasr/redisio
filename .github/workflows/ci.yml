@@ -19,7 +19,6 @@ jobs:
 
   integration:
     needs: lint-unit
-    # runs-on: ubuntu-latest
     runs-on: self-hosted
     strategy:
       matrix:
